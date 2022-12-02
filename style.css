@@ -47,7 +47,6 @@ body{
     width: 20rem;
     z-index: 2;
     transition: all 0.75s ease-out;
-
 }
 
 .circle{
@@ -110,14 +109,36 @@ section{
 
 @media screen and (max-width:726px){
     .card{
-        width: 25rem;
+        width: 20rem;
+    }
+    .sizes{
+        flex-direction: column;
     }
     .sizes button{
+        margin-top: 0.5rem;
         padding: 0.5rem 1rem;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 30px;
     }
     section{
         font-size: 10px;
+    }
+    .cat img{
+        width: 15rem;
+    }
+    .circle{
+        width: 13rem;
+        height: 13rem;
+    }
+    .card{
+        /* transform-style: preserve-3d; */
+        min-height: 70vh;
+    }
+    .title{
+        padding: 0.4rem 0;
+    }
+    .info h3{
+        font-size: 1.3rem;
+        padding: 0.7rem;
     }
 }
