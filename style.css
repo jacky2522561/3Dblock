@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transform-style: preserve-3d; /*solve problem */
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;/*solve problem (if i put this on container the effection is strange)*/ 
+    overflow: hidden;/*solve problem */
+}
+
+.container{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    /* transform-style: preserve-3d; */
+    min-height: 80vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+.title{
+    padding: 2rem 0;
+}
+
+.cat{
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat img{
+    border-radius: 0 0 50% 50%;
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+
+}
+
+.circle{
+    width: 18rem;
+    height: 18rem;
+    background: linear-gradient(
+        to right,
+        rgba(203, 64, 66, 1),
+        rgba(171,59,58,0.6)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.75s ease-out;
+}
+
+.info h1{
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+}
+
+.info h3{
+    font-size: 1.5rem;
+    padding:2rem 0;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+
+}
+
+.sizes{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+
+.sizes button{
+    padding: 0.5rem 2rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    transition: all 0.75s ease-out;
+
+}
+
+button.active{
+    background: #585858;
+    color:white;
+}
+
+section{
+    /* background-color: #585858; */
+    position: absolute;
+    bottom: 5px;
+}
+
+@media screen and (max-width:726px){
+    .card{
+        width: 25rem;
+    }
+    .sizes button{
+        padding: 0.5rem 1rem;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+    }
+    section{
+        font-size: 10px;
+    }
+}
